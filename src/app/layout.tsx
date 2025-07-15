@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Ysabeau } from "next/font/google";
 import "./globals.css";
+
+import localFont from "next/font/local";
+
+const dofta = localFont({
+  src: "./Dofta.woff2",
+  display: "swap",
+  variable: "--font-dofta",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +18,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const ysabeau = Ysabeau({
+  variable: "--font-ysabeau",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ysabeau.className} antialiased`}
       >
         {children}
       </body>
