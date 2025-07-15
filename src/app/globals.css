@@ -29,7 +29,7 @@ main {
 
 .cardContainer {
   display:flex;
-  height:100vh;
+  height:100vh; 
   align-items: center;
   justify-content: center;
   position: sticky;
